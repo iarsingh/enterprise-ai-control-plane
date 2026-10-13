@@ -1,5 +1,12 @@
 # Enterprise AI Control Plane
 
+## Overview
+
+A capstone review service that blocks an AI request until four checks pass: production is refused, cost is under the cap, a corpus citation is present and the container image tag is pinned. `POST /review` marks only a complete request as `ready_for_readout`, and `live` always stays false. A versioned `/v1` ops API adds workspaces, tenant isolation, job approval and audit, with Docker packaging and a pytest suite run in GitHub Actions.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local lab; nothing goes live and production apply is refused.
+
 <!-- project-guide:start -->
 ## Project guide
 
